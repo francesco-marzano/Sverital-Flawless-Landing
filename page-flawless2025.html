@@ -3430,9 +3430,9 @@ https://flickity.metafizzy.co
          }
 
          .section-home-header .event-facts {
-            position: absolute;
+            /* position: absolute; */
             top: 58%;
-            transform: translateY(calc(-50% + calc(var(--title-size) * 1.25)));
+            /* transform: translateY(calc(-50% + calc(var(--title-size) * 1.25))); */
             height: 2em;
          }
       }
@@ -3761,11 +3761,18 @@ https://flickity.metafizzy.co
       }
 
       .section.full-height.section-home-header .container>.row {
+         padding-top: 0;
+         padding-bottom: 0;
+      }
+
+      .section.full-height.section-home-header .container>.row > .col {
+         padding-top: calc(var(--section-padding) * 0.66);
          padding-bottom: calc(var(--section-padding) * 0.66);
+         gap: 5em;
       }
 
       .section-home-header .col {
-         justify-content: flex-end;
+         justify-content: center;
          align-items: center;
          position: relative;
          width: 100%;
@@ -3843,6 +3850,14 @@ https://flickity.metafizzy.co
       }
 
       /* Loading flawless */
+      .loading-flawles-wraper {
+         position:absolute;
+         width: 100%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         bottom: calc(var(--section-padding) * 0.66);
+      }
 
       .loading-flawless {
          display: flex;
@@ -3881,10 +3896,10 @@ https://flickity.metafizzy.co
       /* Logo flawless */
 
       .section-home-header .logo-flawless-scroll {
-         position: absolute;
+         /* position: absolute; */
          top: 45%;
          left: 50%;
-         transform: translate(-50%, -50%);
+         /* transform: translate(-50%, -50%); */
          width: calc(var(--title-size) * 7);
          max-width: 70%;
          opacity: 0;
@@ -3915,7 +3930,6 @@ https://flickity.metafizzy.co
          align-items: center;
          opacity: 0;
          overflow: hidden;
-         position: relative;
          max-width: 60em;
       }
 
@@ -3939,16 +3953,15 @@ https://flickity.metafizzy.co
       @media screen and (max-width: 860px) {
 
          .section-home-header .event-facts {
-            position: absolute;
+            /* position: absolute; */
             top: 58%;
-            transform: translateY(calc(-50% + calc(var(--title-size) * 1.25)));
+            /* transform: translateY(calc(-50% + calc(var(--title-size) * 1.25))); */
             height: 2em;
          }
 
          .section-home-header .section-home-header-button {
-            position: absolute;
+            /* position: absolute; */
             top: 74%;
-            height: 2em;
             font-size: 1.3em;
             color: #000
          }
@@ -5506,7 +5519,7 @@ performance." transform="translate(141 19)" fill="#fff" font-size="20" font-fami
                      <div class="event-facts">
                         <p class="event-date">10 aprile 2025 | Sverital Showroom</p>
                      </div>
-                     <div class="destop-hidden section-home-header-button">
+                     <div class="desktop-hidden section-home-header-button">
                         <div class="row">
                            <div class="col">
                               <div class="btn outline btn-hover xl">
@@ -5525,10 +5538,12 @@ performance." transform="translate(141 19)" fill="#fff" font-size="20" font-fami
                            </div>
                         </div>
                      </div>
-                     <div class="loading-flawless">
-                        <p>Flawless loading <span class="loading-percentage">100</span>%</p>
-                        <div class="loading-bar">
-                           <div class="status"></div>
+                     <div class="loading-flawles-wraper">
+                        <div class="loading-flawless">
+                           <p>Flawless loading <span class="loading-percentage">100</span>%</p>
+                           <div class="loading-bar">
+                              <div class="status"></div>
+                           </div>
                         </div>
                      </div>
                   </div>
