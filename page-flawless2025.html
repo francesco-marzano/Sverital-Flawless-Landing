@@ -49,14 +49,6 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-
-      @font-face {
-         font-family: 'Helvetica Neue';
-         font-style: normal;
-         font-weight: 400;
-         src: url('assets/fonts/helvetica-neue-5/HelveticaNeueRoman.otf') format('woff');
-      }
-
       @font-face {
          font-family: 'Helvetica Neue';
          font-style: italic;
@@ -4285,14 +4277,18 @@ https://flickity.metafizzy.co
       .section-schedule-content {
          margin-top: 4.6em;
          display: flex;
-         font-size: 1em;
+         font-size: 0.8em;
          padding-left: 4em;
          gap: 10em;
       }
 
+      .section-schedule-content-hr {
+         margin-top: 2em;
+      }
+
       .section-schedule-content-gray {
          color: #D3D3D3;
-         font-size: 0.8em;
+         font-size: 0.9em;
       }
 
       .section-schedule-content>div div {
@@ -4312,10 +4308,36 @@ https://flickity.metafizzy.co
       }
 
       .section-schedule-mattina {
-         display: none;
+         font-size: 1.5em;
       }
 
-      @media screen and (max-width: 540px) {
+     
+      .section-schedule-content-time {
+         font-weight: bold;
+         color: var(--color-primary);
+         margin-top: 2em;
+      }
+
+      .section-schedule-content-speaker { 
+         font-style: italic;
+      }
+
+      .section-schedule-more-btn {
+         background-color: black;
+         border: none;
+      }
+
+      .section-schedule-close-btn {
+         background-color: black;
+         border: none;
+      }
+
+      .section-schedule-more-btn-wrapper {
+         margin-top: 3.1em;
+      }
+
+
+      @media screen and (max-width: 860px) {
          .section-schedule-paragraph div {
             font-size: 3em;
             max-width: 10em;
@@ -4364,26 +4386,8 @@ https://flickity.metafizzy.co
             margin-top: 3.1em;
          }
 
-         .section-schedule-more-btn {
-            background-color: black;
-            border: none;
-         }
-
-         .section-schedule-close-btn {
-            background-color: black;
-            border: none;
-         }
-
-         .section-schedule-mattina {
-            display: block;
-            font-size: 1.2em;
-            font-weight: bold;
-            margin-bottom: 2.5em;
-            text-transform: uppercase;
-         }
-
-         .section-schedule-mattina-2 {
-            margin-top: 1.5em;
+         .section-schedule-content>div div {
+            max-width: 100%;
          }
       }
 
@@ -6286,45 +6290,21 @@ performance." transform="translate(141 19)" fill="#fff" font-size="20" font-fami
          <section class="section section-schedule" id="agenda">
             <div>
                <div class="section-schedule-paragraph">
-                  <div>Flawless – Unlock new standards in silicone performance</div>
-                  <div class="section-schedule-paragraph-second">Programma dell’evento | 10.04.2025</div>
-               </div>
-               <div class="section-schedule-bar">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="1553.253" height="102" viewBox="0 0 1553.253 102">
-                     <path id="Path_51" data-name="Path 51" d="M183,6049.014H1736.253" transform="translate(-183 -6000)"
-                        fill="none" stroke="#fff" stroke-width="3" />
-                     <rect id="Rectangle_47" data-name="Rectangle 47" width="213" height="102"
-                        transform="translate(1242)" />
-                     <rect id="Rectangle_48" data-name="Rectangle 48" width="213" height="102"
-                        transform="translate(117)" />
-                     <rect id="Rectangle_49" data-name="Rectangle 49" width="213" height="102"
-                        transform="translate(671)" />
-                     <text id="POMERIGGIO" transform="translate(1284.024 35.514)" fill="#fff" font-size="20"
-                        font-family="HelveticaNeue, Helvetica Neue">
-                        <tspan x="0.29" y="19">POMERIGGIO</tspan>
-                     </text>
-                     <text id="MATTINA" transform="translate(159.024 35.514)" fill="#fff" font-size="20"
-                        font-family="HelveticaNeue-Bold, Helvetica Neue" font-weight="700">
-                        <tspan x="19.57" y="20">MATTINA</tspan>
-                     </text>
-                     <text id="PRANZO" transform="translate(713 35.514)" fill="#fff" font-size="20"
-                        font-family="HelveticaNeue, Helvetica Neue">
-                        <tspan x="23.26" y="19">PRANZO</tspan>
-                     </text>
-                  </svg>
+                  <div>Programma dell’evento</div>
+
                </div>
                <div class="section-schedule-content">
                   <div>
-                     <div class="section-schedule-mattina">MATTINA</div>
-                     <div class="section-schedule-content-time">• 09:30 – 10:00 | Registrazione e Welcome Coffee</div>
+                     <div class="section-schedule-mattina">Mattina</div>
+                     <div class="section-schedule-content-time">09:30 – 10:00 | Registrazione e Welcome Coffee</div>
                      <div>Accoglienza partecipanti con registrazione e distribuzione dei kit di benvenuto.</div>
-                     <div class="section-schedule-content-br section-schedule-content-time">• 10:00 – 10:15 | Apertura evento e benvenuto</div>
+                     <div class="section-schedule-content-br section-schedule-content-time">10:00 – 10:15 | Apertura evento e benvenuto</div>
                      <div>Introduzione di Sverital e dei partner (Arburg, Wacker, Nexus, FCS). Overview del tema dell’evento e obiettivi della giornata.</div>
-                     <div class="section-schedule-content-br">Speaker: Patrik Norén – Sverital®</div>
-                     <div class="section-schedule-content-br section-schedule-content-time">• 10:15 – 10:45 | Sessione tecnica: Siliconi liquidi e solidi - dalla composizione chimica alle tendenze di mercato.</div>
+                     <div class="section-schedule-content-speaker section-schedule-content-br">Speaker: Patrik Norén – Sverital®</div>
+                     <div class="section-schedule-content-br section-schedule-content-time">10:15 – 10:45 | Sessione tecnica: Siliconi liquidi e solidi - dalla composizione chimica alle tendenze di mercato.</div>
                      <div>Panoramica dei materiali siliconici liquidi e solidi con un focus sulle proprietà tecniche, le principali applicazioni e uno sguardo al mercato italiano ed europeo.</div>
                      <div class="section-schedule-content-br section-schedule-content-gray">In poche parole: imparerai cos’è il silicone, cosa significa liquido-solido e perché sempre più aziende lo richiedono.</div>
-                     <div class="section-schedule-content-br">Speaker: Marijke Claesen – Wacker</div>
+                     <div class="section-schedule-content-speaker section-schedule-content-br">Speaker: Marijke Claesen – Wacker</div>
                      <div class="section-schedule-more-btn-wrapper"><button class="section-schedule-more-btn"><svg
                               fill="#000000" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                               xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
@@ -6348,40 +6328,42 @@ performance." transform="translate(141 19)" fill="#fff" font-size="20" font-fami
                            </svg></button></div>
                      <div
                         class="section-schedule-content-br section-schedule-content-time section-schedule-content-mobile-hidden">
-                        • 10:45 – 11:15 | Sessione tecnica: LSR, silicone solido e gomme termoplastiche: Confronto tecnico sulle diverse tecnologie di stampaggio.</div>
+                        10:45 – 11:15 | Sessione tecnica: LSR, silicone solido e gomme termoplastiche: Confronto tecnico sulle diverse tecnologie di stampaggio.</div>
                      <div class="section-schedule-content-mobile-hidden">L’esperienza di Arburg nella lavorazione del silicone liquido LSR, del silicone solido e delle gomme termoplastiche. Focus su ottimizzazione dei processi produttivi e casi applicativi specifici.</div>
                      <div class="section-schedule-content-br section-schedule-content-gray section-schedule-content-mobile-hidden">In poche parole: capirai quali presse conviene utilizzare e come impostare tecnicamente uno stampaggio perfetto.</div>
-                     <div class="section-schedule-content-br section-schedule-content-mobile-hidden">Speaker: Luca Adessa – Arburg Italia</div>
+                     <div class="section-schedule-content-speaker section-schedule-content-br section-schedule-content-mobile-hidden">Speaker: Luca Adessa – Arburg Italia</div>
                      <div
                         class="section-schedule-content-br section-schedule-content-time section-schedule-content-mobile-hidden">
-                        • 11:15 – 11:30 | Coffee break e networking</div>
+                        11:15 – 11:30 | Coffee break e networking</div>
                      <div class="section-schedule-content-mobile-hidden">Momento di pausa per interazioni informali e networking tra i partecipanti.</div>
                      <div
                         class="section-schedule-content-br section-schedule-content-time section-schedule-content-mobile-hidden">
-                        • 11:30 – 12:00 | Sessione tecnica: Sistemi per il dosaggio del silicone: da semplice pompa di dosaggio ad asset fondamentale nel processo di trasformazione.</div>
+                        11:30 – 12:00 | Sessione tecnica: Sistemi per il dosaggio del silicone: da semplice pompa di dosaggio ad asset fondamentale nel processo di trasformazione.</div>
                      <div class="section-schedule-content-mobile-hidden">Evoluzione dei sistemi di dosaggio del silicone liquido LSR e innovazioni tecnologiche introdotte da Nexus Dosing nei processi di stampaggio. </div>
                      <div class="section-schedule-content-br section-schedule-content-gray section-schedule-content-mobile-hidden">In poche parole: capirai cos’è un sistema di dosaggio del silicone e cosa ti permette di guadagnare competitività sull’intero processo di stampaggio.</div>
-                     <div class="section-schedule-content-br section-schedule-content-mobile-hidden">Speaker: Claudio Stringaro – Sverital® e Markus Reiter – Nexus Dosing</div>
+                     <div class="section-schedule-content-speaker section-schedule-content-br section-schedule-content-mobile-hidden">Speaker: Claudio Stringaro – Sverital® e Markus Reiter – Nexus Dosing</div>
                   </div>
                   <div class="section-schedule-content-mobile-hidden">
                      <div
-                        class="section-schedule-content-br section-schedule-content-time section-schedule-content-mobile-hidden">
-                        • 12:00 – 12:30 | Sessione tecnica: Stampi LSR - Tecnologie e best practices con un focus sui canali freddi.</div>
-                     <div class="section-schedule-content-mobile-hidden">Differenze fondamentali tra gli stampi LSR e quelli tradizionali per materiali termoplastici. In dettaglio le soluzioni per migliorare precisione e durata, con un approfondimento sulla tecnologia del canale freddo per ottimizzare il processo, aumentare la flessibilità e garantire un’elevata qualità del prodotto.</div>
-                     <div class="section-schedule-content-br section-schedule-content-gray section-schedule-content-mobile-hidden">In poche parole: scoprirai la differenza tra uno stampo LSR e uno per materiali termoplastici. Inoltre, capirai quali caratteristiche sono fondamentali in fase progettuale e come ottimizzare i risultati in fase di stampaggio grazie ai canali freddi.</div>
-                     <div class="section-schedule-content-br section-schedule-content-mobile-hidden">Speaker: Simone Calamari – FCS Stampi</div>
+                        class="section-schedule-content-br section-schedule-content-time">
+                        12:00 – 12:30 | Sessione tecnica: Stampi LSR - Tecnologie e best practices con un focus sui canali freddi.</div>
+                     <div>Differenze fondamentali tra gli stampi LSR e quelli tradizionali per materiali termoplastici. In dettaglio le soluzioni per migliorare precisione e durata, con un approfondimento sulla tecnologia del canale freddo per ottimizzare il processo, aumentare la flessibilità e garantire un’elevata qualità del prodotto.</div>
+                     <div class="section-schedule-content-br section-schedule-content-gray">In poche parole: scoprirai la differenza tra uno stampo LSR e uno per materiali termoplastici. Inoltre, capirai quali caratteristiche sono fondamentali in fase progettuale e come ottimizzare i risultati in fase di stampaggio grazie ai canali freddi.</div>
+                     <div class="section-schedule-content-speaker section-schedule-content-br">Speaker: Simone Calamari – FCS Stampi</div>
+                     <hr class="section-schedule-content-hr">
                      <div class="section-schedule-mattina section-schedule-mattina-2"><br />Metà giornata</div>
-                     <div class="section-schedule-content-br section-schedule-content-time">• 12:30 – 13:45 | Business lunch</div>
+                     <div class="section-schedule-content-br section-schedule-content-time">12:30 – 13:45 | Business lunch</div>
                      <div class="section-schedule-content-mobile-hidden">Pranzo informale con opportunità di networking.</div>
+                     <hr class="section-schedule-content-hr">
                      <div class="section-schedule-mattina section-schedule-mattina-2"><br/>Pomeriggio</div>
-                     <div class="section-schedule-content-time section-schedule-content-br">• 13:45 – 15:30 | Open talk</div>
+                     <div class="section-schedule-content-time section-schedule-content-br">13:45 – 15:30 | Open talk</div>
                      <div>Discussione tra gli speaker e i partecipanti attraverso attività interattive di domande e risposte.</div>
-                     <div class="section-schedule-content-br section-schedule-content-time">• 15:30 – 16:00 | Demo Live: Stampaggio di silicone LSR in azione</div>
+                     <div class="section-schedule-content-br section-schedule-content-time">15:30 – 16:00 | Demo Live: Stampaggio di silicone LSR in azione</div>
                      <div>Dimostrazione pratica delle tecnologie Arburg e Nexus Dosing con stampo FCS e silicone Wacker. Durante la sessione interattiva, i partecipanti potranno vedere i macchinari in funzione e discutere sul processo in corso.</div>
-                     <div class="section-schedule-content-br section-schedule-content-time">• 16:00 – 16:15 | Conclusioni e Ringraziamenti</div>
+                     <div class="section-schedule-content-br section-schedule-content-time">16:00 – 16:15 | Conclusioni e Ringraziamenti</div>
                      <div>Chiusura dell’evento con un breve riepilogo dei punti chiave e ringraziamenti ai partner e ai partecipanti.
                      </div>
-                     <div class="section-schedule-content-br">Speaker: Claudio Stringaro – Sverital®</div>
+                     <div class="section-schedule-content-speaker section-schedule-content-br">Speaker: Claudio Stringaro – Sverital®</div>
                      <div class="section-schedule-more-btn-wrapper"><button class="section-schedule-close-btn"><!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
                         <svg fill="#000000" height="24px" width="24px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-82.5 -82.5 495.00 495.00" xml:space="preserve">
 
